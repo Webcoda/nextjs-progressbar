@@ -1,8 +1,6 @@
 # Next.js Progressbar
 
-A simple Next.js progressbar component using [NProgress](http://ricostacruz.com/nprogress/).
-
-> [I've created this Blog to help you create your own progressbar](https://gosink.in/next-js-make-your-own-progress-bar-indicator-component-easily/)
+Fork of [Next.js progressbar](https://github.com/apal21/nextjs-progressbar), just to publish v0.0.15 (at the time of publishing)
 
 **Demo**: [https://demo-nextjs-progressbar.vercel.app](https://demo-nextjs-progressbar.vercel.app/)
 
@@ -17,13 +15,13 @@ npm i nextjs-progressbar
 After installing the package, import `NextNProgress` in your `pages/_app.js` file:
 
 ```js
-import NextNProgress from "nextjs-progressbar";
+import NextNProgress from 'nextjs-progressbar';
 ```
 
 And for rendering add `<NextNProgress />` to your `return()` in `MyApp()`:
 
 ```js
-import NextNProgress from "nextjs-progressbar";
+import NextNProgress from 'nextjs-progressbar';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -40,13 +38,7 @@ export default function MyApp({ Component, pageProps }) {
 If no props are passed to `<NextNProgress />`, below is the default configuration applied.
 
 ```jsx
-<NextNProgress
-  color="#29D"
-  startPosition={0.3}
-  stopDelayMs={200}
-  height={3}
-  showOnShallow={true}
-/>
+<NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
 ```
 
 - `color`: to change the default color of progressbar. You can also use `rgb(,,)` or `rgba(,,,)`.
@@ -70,5 +62,5 @@ We use internal css in this package. If you are using csp, you can add nonce to 
 You can use [other configurations](https://github.com/rstacruz/nprogress#configuration) which NProgress provides by adding a JSON in `options` props.
 
 ```jsx
-<NextNProgress options={{ easing: "ease", speed: 500 }} />
+<NextNProgress options={{ easing: 'ease', speed: 500 }} />
 ```
